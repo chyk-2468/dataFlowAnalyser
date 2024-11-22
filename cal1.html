@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Network Calculation</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <canvas id="particleCanvas"></canvas>
+    <!-- Title Section -->
+    <div class="title-section">
+      <h1>DataFlow Analyzer</h1>
+    </div>
+
+    <!-- Form Section -->
+    <div class="container">
+      <div class="input-group">
+        <label for="dataRate">Data Rate:</label>
+        <input type="number" id="dataRate" placeholder="Enter Data Rate" />
+        <select id="dataRateUnit">
+          <option value="Bps">Bps</option>
+          <option value="Kbps">KBps</option>
+          <option value="Mbps">MBps</option>
+          <option value="Gbps">GBps</option>
+        </select>
+      </div>
+
+      <div class="input-group">
+        <label for="distance">Distance:</label>
+        <input type="number" id="distance" placeholder="Enter Distance" />
+        <select id="distanceUnit">
+          <option value="m">m</option>
+          <option value="km">km</option>
+          <option value="miles">miles</option>
+        </select>
+      </div>
+
+      <div class="input-group">
+        <label for="dataSize">Data Size:</label>
+        <input type="number" id="dataSize" placeholder="Enter Data Size" />
+        <select id="dataSizeUnit">
+          <option value="B">Bits</option>
+          <option value="B">B</option>
+          <option value="KB">KB</option>
+          <option value="MB">MB</option>
+          <option value="GB">GB</option>
+        </select>
+      </div>
+
+      <div class="input-group">
+        <label for="packetSize">Packet Size:</label>
+        <input type="number" id="packetSize" placeholder="Enter Packet Size" />
+        <select id="PacketUnit">
+          <option value="B">Bits</option>
+          <option value="B">B</option>
+          <option value="MB">MB</option>
+          <option value="KB">KB</option>
+          <option value="GB">GB</option>
+        </select>
+      </div>
+
+      <div class="input-group">
+        <label for="macOverhead">MAC Overhead:</label>
+        <input
+          type="number"
+          id="macOverhead"
+          placeholder="Enter MAC Overhead"
+        />
+        <select id="macOverheadUnit">
+          <option value="B">Bits</option>
+          <option value="B">B</option>
+          <option value="MB">MB</option>
+          <option value="KB">KB</option>
+          <option value="GB">GB</option>
+        </select>
+      </div>
+
+      <div class="input-group">
+        <label for="propagationSpeed">Propagation Speed:</label>
+        <input
+          type="number"
+          id="propagationSpeed"
+          placeholder="Enter Propagation Speed"
+        />
+        <select id="propogation speed unit">
+          <option value="m/s">m/s</option>
+          <option value="m/s8">m/s * 10^8</option>
+        </select>
+      </div>
+
+      <div class="input-group">
+        <label for="queueingDelay">Queueing Delay:</label>
+        <input
+          type="number"
+          id="queueingDelay"
+          placeholder="Enter Queueing Delay"
+        />
+        <select id="queueingDelay speed unit">
+          <option value="milliQueingDelay">ms</option>
+          <option value="secondQueingDelay">sec</option>
+        </select>
+      </div>
+
+      <div class="input-group">
+        <label for="processingDelay">Processing Delay:</label>
+        <input
+          type="number"
+          id="processingDelay"
+          placeholder="Enter Processing Delay"
+        />
+        <select id="processingDelay speed unit">
+          <option value="milliprocessingDelay">ms</option>
+          <option value="secondprocessigDelay">sec</option>
+        </select>
+      </div>
+
+      <button id="calculateBtn">Calculate</button>
+
+      <!-- Direct Solution Section -->
+      <div id="directSolution" style="display: none">
+        <h3>Direct Solution:</h3>
+        <p id="directResult"></p>
+        <button id="fullSolutionBtn" style="display: none">
+          Show Full Solution
+        </button>
+      </div>
+
+      <!-- Full Solution Section -->
+      <div id="fullSolution" style="display: none">
+        <h3>Step-by-Step Calculation:</h3>
+        <pre id="output"></pre>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,94 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(45deg, #000000, #1e201f, #0b0c0c, #000000);
+  background-size: 400% 400%;
+  animation: gradientMove 15s ease infinite;
+  display: flex;
+  flex-direction: column; /* Change to column to stack title and container */
+  align-items: center; /* Center align items */
+  height: 100vh;
+  margin: 0;
+  /* cursor: none; */ /* Removed to show the default cursor */
+}
+
+.title-section {
+  margin-bottom: 20px; /* Add some space below the title */
+}
+
+.title-section h1 {
+  font-size: 3rem;
+  color: #4fcd79;
+  text-shadow: 2px 2px 8px rgba(0, 255, 0, 0.8);
+  text-align: center; /* Center the text */
+  line-height: 1.5;
+}
+
+.container {
+  color: #a4ffb4;
+  text-shadow: 2px 2px 8px rgba(0, 255, 0, 0.8);
+  background-color: rgba(17, 15, 15, 0.8);
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 900px;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  width: 30%;
+  font-size: 16px; /* Ensures consistent font size for labels */
+}
+
+.input-group input,
+.input-group select {
+  width: 30%;
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px; /* Ensures consistent font size for inputs and selects */
+}
+
+button {
+  background-color: #008521;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px; /* Ensures consistent font size for buttons */
+}
+
+button:hover {
+  transform: scale(1.1);
+  background-color: #005415;
+  box-shadow: 0px 0px 20px rgba(0, 255, 0, 0.2);
+}
+
+#directSolution,
+#fullSolution {
+  color: black;
+  text-shadow: 2px 2px 8px rgba(8, 8, 8, 0.3);
+  margin-top: 20px;
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#particleCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
